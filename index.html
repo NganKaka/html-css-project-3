@@ -114,41 +114,35 @@
     <body style="height: 1000px">
         <!-- HEADER -->
         <header class="header">
-            <div class="main-content">
-                <div class="body">
+            <div class="container">
+                <!-- HEADER-TOP -->
+                <div class="header-top">
                     <!-- Logo -->
-                    <div class="logo">
-                        <a href="#!"
-                            ><img
-                                src="./assets/icons/logo.svg"
-                                alt="shine smile"
-                                class="logo__img"
-                        /></a>
-                        <div class="logo__desc">
-                            <p>shine</p>
-                            <p class="smaller">smile</p>
+                    <a href="#">
+                        <div class="logo">
+                            <span class="logo__circle"></span>
+                            <span class="logo__text">
+                                <span class="logo__brand">shine</span>
+                                <span class="logo__brand logo__brand--small">
+                                    smile
+                                </span>
+                            </span>
                         </div>
-                    </div>
+                    </a>
                     <!-- Navbar -->
                     <nav class="navbar">
                         <ul class="navbar__list">
-                            <li>
-                                <a class="navbar__list__item" href="#!">Home</a>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!"> Home </a>
                             </li>
-                            <li>
-                                <a class="navbar__list__item" href="#!"
-                                    >Service</a
-                                >
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!">Service</a>
                             </li>
-                            <li>
-                                <a class="navbar__list__item" href="#!"
-                                    >About</a
-                                >
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!">About</a>
                             </li>
-                            <li>
-                                <a class="navbar__list__item" href="#!"
-                                    >Doctors</a
-                                >
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#!"> Doctors </a>
                             </li>
                         </ul>
                     </nav>
@@ -158,51 +152,47 @@
                         <a href="#!" class="btn action__signup">Sign Up</a>
                     </div>
                 </div>
+
+                <!-- HERO -->
+                <section class="hero">
+                    <section class="hero-content">
+                        <h1 class="hero__heading">
+                            Exceptional dental care for all ages.
+                        </h1>
+                        <p class="hero__desc">
+                            Exceptional dental care for all ages. Your great
+                            smile begins with a great dentist.
+                        </p>
+                        <div class="hero__row">
+                            <a href="#!" class="btn">Book Online</a>
+                            <span class="hero__phone"
+                                >or call (123) 456-7890</span
+                            >
+                        </div>
+                    </section>
+                    <div class="hero-media">
+                        <figure class="hero__images">
+                            <img
+                                class="hero__img"
+                                src="./assets/img/dental-img-1.jpg"
+                                alt="Exceptional dental care for all ages."
+                            />
+                            <img
+                                class="hero__img"
+                                src="./assets/img/dental-img-2.jpg"
+                                alt="Exceptional dental care for all ages."
+                            />
+                        </figure>
+                    </div>
+                </section>
             </div>
         </header>
 
         <!-- MAIN -->
         <main>
-            <!-- HERO -->
-            <div class="hero">
-                <div class="main-content">
-                    <div class="hero__body">
-                        <section class="content-block">
-                            <h1 class="heading content-block__heading">
-                                Exceptional dental care for all ages.
-                            </h1>
-                            <p class="content-block__desc">
-                                Exceptional dental care for all ages. Your great
-                                smile begins with a great dentist.
-                            </p>
-                            <div class="contact">
-                                <a href="#!" class="btn contact__btn"
-                                    >Book Online</a
-                                >
-                                <span class="contact__telephone"
-                                    >or call (123) 456-7890</span
-                                >
-                            </div>
-                        </section>
-                        <div class="img-block">
-                            <img
-                                class="image-larger"
-                                src="./assets/img/dental-img-1.jpg"
-                                alt="Exceptional dental care for all ages."
-                            />
-                            <img
-                                class="image-smaller"
-                                src="./assets/img/dental-img-2.jpg"
-                                alt="Exceptional dental care for all ages."
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- SERVICES -->
             <div class="services">
-                <div class="main-content">
+                <div class="container">
                     <div class="services__body">
                         <h2 class="heading lv1 line-clamp break-all">
                             Our services
@@ -272,5 +262,6 @@
 
         <!-- FOOTER -->
         <footer></footer>
+        <script src="./script.js"></script>
     </body>
 </html>
