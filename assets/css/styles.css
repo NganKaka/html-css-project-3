@@ -4,7 +4,7 @@
 
 :root {
     --primary-color: #2e80ce;
-    --main-bgc: #10375c;
+    --main-bgc: rgb(16, 55, 92);
     --font-heading: "Open Sans", sans-serif;
 }
 
@@ -26,6 +26,24 @@ body {
     display: flex;
 }
 /************************* Common ********************/
+.sticky {
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgba(16, 55, 92, 0.9);
+    z-index: 1000;
+    padding-left: 165px;
+    padding-right: 165px;
+}
+
+.section {
+    transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+
 .transparent {
     background-color: transparent;
 }
@@ -137,7 +155,8 @@ button:hover {
 .header-top {
     display: flex;
     align-items: center;
-    padding: 30px 0 8px;
+    padding-top: 12px;
+    padding-bottom: 8px;
 }
 /* Logo */
 .logo {

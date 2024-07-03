@@ -114,8 +114,9 @@
             content="./assets/favicon/ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
+        <script defer src="./script.js"></script>
     </head>
-    <body style="height: 1000px">
+    <body>
         <!-- HEADER -->
         <header class="header">
             <div class="container">
@@ -137,28 +138,54 @@
                     <nav class="navbar">
                         <ul class="navbar__list">
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#!"> Home </a>
+                                <a
+                                    class="navbar__link"
+                                    href="#home"
+                                    data-id="home"
+                                >
+                                    Home
+                                </a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#!">Service</a>
+                                <a
+                                    class="navbar__link"
+                                    href="#service"
+                                    data-id="service"
+                                    >Service</a
+                                >
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#!">About</a>
+                                <a
+                                    class="navbar__link"
+                                    href="#about"
+                                    data-id="about"
+                                    >About</a
+                                >
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#!"> Doctors </a>
+                                <a
+                                    class="navbar__link"
+                                    href="#doctors"
+                                    data-id="doctors"
+                                >
+                                    Doctors
+                                </a>
                             </li>
                         </ul>
                     </nav>
                     <!-- Actions -->
                     <div class="action">
-                        <a href="#!" class="action__login">Log In</a>
-                        <a href="#!" class="btn action__signup">Sign Up</a>
+                        <a href="#!" class="action__link action__login"
+                            >Log In</a
+                        >
+                        <a href="#!" class="action__link btn action__signup"
+                            >Sign Up</a
+                        >
                     </div>
                 </div>
 
                 <!-- HERO -->
-                <section class="hero">
+                <section class="hero" id="home">
                     <section class="hero-content">
                         <h1 class="hero__heading">
                             Exceptional dental care for all ages.
@@ -195,7 +222,7 @@
         <!-- MAIN -->
         <main>
             <!-- SERVICES -->
-            <section class="service">
+            <section class="section section--1 service" id="service">
                 <div class="container">
                     <h2 class="section-heading line-clamp break-all">
                         Our services
@@ -266,7 +293,7 @@
             </section>
 
             <!-- WORK -->
-            <section class="work">
+            <section class="section section--2 work">
                 <div class="container">
                     <h2 class="section-heading">How it works</h2>
                     <p class="section-desc">
@@ -321,7 +348,7 @@
             </section>
 
             <!-- FEATURE -->
-            <section class="feature">
+            <section class="section section--3 feature" id="about">
                 <div class="container">
                     <div class="feature-row">
                         <div class="feature-media">
@@ -354,7 +381,7 @@
             </section>
 
             <!-- member -->
-            <section class="member">
+            <section class="section section--4 member" id="doctors">
                 <div class="container">
                     <header class="member__header">
                         <h2 class="section-heading">Our virtual dentist</h2>
@@ -428,7 +455,7 @@
             </section>
 
             <!-- INSTALL APP -->
-            <section class="install">
+            <section class="section section--5 install">
                 <div class="container">
                     <div class="install-body">
                         <figure class="install__images">
@@ -462,7 +489,7 @@
             </section>
 
             <!-- NEWS -->
-            <section class="news">
+            <section class="section section--6 news">
                 <div class="container">
                     <div class="news__inner">
                         <div class="news__content">
@@ -531,7 +558,7 @@
             </section>
 
             <!-- APPOINTMENT -->
-            <section class="appointment">
+            <section class="section section--7 appointment">
                 <div class="container">
                     <div class="appointment__inner">
                         <h2 class="section-heading appointment__heading">
@@ -681,6 +708,6 @@
                 </div>
             </div>
         </footer>
-        <script src="./script.js"></script>
+        <!-- <script src="./script.js"></script> -->
     </body>
 </html>
