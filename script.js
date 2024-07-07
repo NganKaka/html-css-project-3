@@ -83,3 +83,57 @@ const headerObserver = new IntersectionObserver(stickyNav, {
     rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+///##################### SLIDEr  #########################//
+const chevronLeft = document.querySelector(".chevron__left");
+const chevronRight = document.querySelector(".chevron__right");
+const slides = document.querySelectorAll(".member-list");
+const dots = document.querySelectorAll(".dots__dot");
+const totalSlides = slides.length;
+let currentSlide = 0;
+
+const goToSlide = function (slide) {
+    slides.forEach((s, i) => {
+        s.style.transform = `translateX(${100 * (i - slide)}%)`;
+    });
+};
+const nextSlide = function () {
+    if (currentSlide === totalSlides - 1) {
+        currentSlide = 0;
+    } else {
+        currentSlide++;
+    }
+    goToSlide(currentSlide);
+    activeDot(currentSlide);
+};
+const previousSlide = function () {
+    if (currentSlide === 0) {
+        currentSlide = totalSlides - 1;
+    } else {
+        currentSlide--;
+    }
+    goToSlide(currentSlide);
+    activeDot(currentSlide);
+};
+const activeDot = function (slide) {
+    document
+        .querySelectorAll(".dots__dot")
+        .forEach((dot) => dot.classList.remove("dots__dot--active"));
+    document
+        .querySelector(`.dots__dot[data-slide="${slide}"]`)
+        .classList.add("dots__dot--active");
+};
+chevronRight.addEventListener("click", nextSlide);
+chevronLeft.addEventListener("click", previousSlide);
+
+dots.forEach((dot) => {
+    dot.addEventListener("click", function (e) {
+        const slide = parseInt(e.target.dataset.slide);
+
+        goToSlide(slide);
+        activeDot(slide);
+    });
+});
+
+goToSlide(0);
+activeDot(0);
