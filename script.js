@@ -137,3 +137,12 @@ dots.forEach((dot) => {
 
 goToSlide(0);
 activeDot(0);
+
+///##################### TYPED  #########################//
+var typed = new Typed("#typed", {
+    strings: ["children", "babies", "women", "all ages."],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+});
