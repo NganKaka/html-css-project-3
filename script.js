@@ -146,3 +146,6 @@ var typed = new Typed("#typed", {
     backDelay: 1000,
     loop: true,
 });
+
+///##################### AUTO SLIDE  #########################//
+setInterval(nextSlide, 4000);
